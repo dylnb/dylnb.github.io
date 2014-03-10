@@ -1,0 +1,268 @@
+html {
+  margin: 0;
+  background-color:#fff;
+  padding: 0;
+}
+
+body {
+  font-family:'Roboto', sans-serif;
+/*  font-family:'Crete Round', sans-serif;*/
+/*  font-family:'Bitter', sans-serif;*/
+  font-size:16px;
+  color:#000;
+  min-height:40em;
+  width:40em;
+  margin:2em auto;
+  padding:2em;
+  background-color:#fff;
+}
+
+/* From Liz */ 
+#nav{
+  position: relative;
+  text-align: center;
+}
+
+#nav a {
+  text-decoration:none;
+}
+
+.button {
+  display: inline-block;
+  height: 125px;
+  width: 125px;
+  border-radius: 100%;
+  border: 4px solid #000;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin:0.5em;
+}
+
+.button p {
+  position: relative;
+  margin: 52px 0px;
+  font-size: 18px;
+  color: #000;
+}
+
+.button:hover{
+  border:4px solid rgba(0,0,0, 0.25);
+}
+
+.about:hover {
+  background-image:url(../images/me.png);
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.research:hover {
+  background-image:url(../images/hand-math.png);
+}
+
+.code:hover {
+  background-image:url(../images/code-light2.png);
+}
+
+.misc:hover {
+  background-image:url(../images/lobster2.png);
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+/* For Transition Effect */
+.pane {
+  width:40em;
+  height:36em;
+  float:left;
+  position:relative;
+  overflow:auto;
+}
+
+#content {
+  text-align:justify;
+  width:40em;
+  height:36em;
+  position:relative;
+  overflow:hidden;
+}
+
+#panewrapper {
+  width:160em;
+  height:36em;
+  position:relative;
+  overflow:hidden;
+}
+
+
+/* General Styling */
+ul {
+  list-style:none;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none; margin:0; padding:0;
+}
+
+#research ul {
+  padding: 0 0 0 1.2em;
+  list-style-type:disc;
+}
+
+#research ul li {
+  margin:0;
+  font-size:0.95em;
+}
+
+#icon {
+  float:right;
+}
+#icon a:hover {
+  border-bottom:none;
+}
+
+#content a {
+  color:rgb(115, 6, 183);
+  text-decoration:none;
+}
+#content a:hover {
+  border-bottom:1px dotted;
+}
+#content a:active {
+  color:Red;
+}
+
+.imagepluscontainer{ /* main image container */
+position: relative;
+z-index: 1;
+}
+
+.imagepluscontainer img{ /* CSS for image within container */
+position: relative;
+z-index: 2;
+-moz-transition: all 0.3s ease; /* Enable CSS3 transition on all props */
+-webkit-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+.imagepluscontainer div.desc{ /* CSS for desc div of each image. */
+position: absolute;
+top:5px;
+width: 90%;
+z-index: 1; /* Set z-index to that less than image's, so it's hidden beneath it */
+opacity:0;
+font-size:0.75em;
+font-family:sans-serif;
+font-style:normal;
+-moz-transition: all 0.3s ease 0.3s; /* Enable CSS3 transition on desc div. Final 0.5s value is the delay before animation starts */
+-webkit-transition: all 0.3s ease 0.3s;
+-o-transition: all 0.3s ease 0.3s;
+-ms-transition: all 0.3s ease 0.3s;
+transition: all 0.3s ease 0.3s;
+}
+.imagepluscontainer:hover div.desc{ /* CSS for desc div when mouse hovers over main container */
+-moz-transform: translate(0, 100%);
+-webkit-transform: translate(0, 100%);
+-ms-transform: translate(0, 100%);
+-o-transform: translate(0, 100%);
+transform: translate(0, 100%);
+opacity:1; /* Reveal desc DIV fully */
+}
+.imagepluscontainer div.leftslide{
+width: 200px;  /* reset from default */
+/*padding-left:15px;*/
+}
+.imagepluscontainer:hover div.leftslide{
+-moz-transform: translate(-100%, 0);
+-webkit-transform: translate(-100%, 0);
+-ms-transform: translate(-100%, 0);
+-o-transform: translate(-100%, 0);
+transform:translate(-100%, 0);
+}
+  
+
+
+
+
+/* Google Forms */
+div.ss-form-desc {
+  border-width:thin;
+  border-top-style:dashed;
+  border-bottom-style:dashed;
+  padding:2em 10%;
+}
+
+div.errorbox-good {
+  height:21em;
+}
+div.ss-item {
+  height:inherit;
+}
+div.ss-form-entry {
+  height:inherit;
+}
+div.ss-response-box {
+  width:100%;
+  float:right;
+  position:relative;
+  overflow:hidden;}
+div.ss-q-text {
+  width:56%;
+  height:15em;
+  float:right;}
+
+label.ss-q-title {
+  display:block;
+  font-size:1.5em;
+  padding: 1em 0;
+}
+label.ss-q-help {
+  font-size:1.2em;
+}
+
+img.ss-q-pic {
+  float:left;
+  width:40%;
+  position:relative;
+}
+
+ul.ss-choices {
+  clear;
+  float:left;
+  list-style:none;
+  padding:0;
+  position:relative;
+  left:50%;
+}
+li.ss-choice-item {
+  display:block;
+  float:left;
+  list-style:none;
+  position:relative;
+  right:50%;
+  width:5em;
+  margin:1em 0;
+  padding:0;
+}
+
+table.ss-likert {
+  clear;
+  float:left;
+  position:relative;
+  left:50%;
+}
+table.ss-likert tr {
+  display:block;
+  position:relative;
+  right:50%;
+}
+
+td.ss-scalenumbers {
+  width:1.5em;
+  padding-top:2em;
+  text-align:center;
+}
+td.ss-scalerow {
+  width:1.5em;
+  text-align:center;
+}
