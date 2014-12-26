@@ -1,3 +1,4 @@
+/* general styling */
 html {
   margin: 0;
   background-color:#fff;
@@ -6,8 +7,6 @@ html {
 
 body {
   font-family:'Roboto', sans-serif;
-/*  font-family:'Crete Round', sans-serif;*/
-/*  font-family:'Bitter', sans-serif;*/
   font-size:16px;
   color:#000;
   min-height:40em;
@@ -17,14 +16,61 @@ body {
   background-color:#fff;
 }
 
-/* From Liz */ 
-#nav{
-  position: relative;
-  text-align: center;
+ul {
+  list-style:none;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none; margin:0; padding:0;
 }
 
-#nav a {
+#research ul, #code ul {
+  padding: 0 0 0 1.2em;
+  list-style-type:disc;
+}
+
+#research ul li, #code ul li {
+  margin:0;
+  font-size:0.95em;
+}
+
+#content a {
+  color:rgb(115, 6, 183);
   text-decoration:none;
+}
+#content a:hover {
+  border-bottom:1px dotted;
+}
+#content a:active {
+  color:Red;
+}
+ 
+/* corner icons */
+#emtext {
+  display: none;
+  font-size:0.75em;
+  font-family:sans-serif;
+  font-style:normal;
+}
+span.iconbox {
+  float: right;
+}
+span.iconbox a:hover {
+  border-bottom:none;
+}
+#emicon {
+  height: 20px;
+}
+#cvicon {
+  height: 24px;
+}
+#giticon {
+  height: 36px;
+}
+
+/* spotlight circles thanks to Liz: lizwong.com :) */
+#nav {
+  position: relative;
+  text-align: center;
 }
 
 .button {
@@ -39,11 +85,15 @@ body {
   margin:0.5em;
 }
 
-.button p {
+.button a {
+  text-decoration: none;
+  line-height: 125px;
   position: relative;
-  margin: 52px 0px;
   font-size: 18px;
   color: #000;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .button:hover{
@@ -70,7 +120,7 @@ body {
   background-position:center;
 }
 
-/* For Transition Effect */
+/* for smooth scroll transition effect */
 .pane {
   width:40em;
   height:36em;
@@ -93,96 +143,6 @@ body {
   position:relative;
   overflow:hidden;
 }
-
-
-/* General Styling */
-ul {
-  list-style:none;
-  list-style-image:none;
-  list-style-position:outside;
-  list-style-type:none; margin:0; padding:0;
-}
-
-#research ul,
-#code ul {
-  padding: 0 0 0 1.2em;
-  list-style-type:disc;
-}
-
-#research ul li,
-#code ul li {
-  margin:0;
-  font-size:0.95em;
-}
-
-#icon {
-  float:right;
-}
-#icon a:hover {
-  border-bottom:none;
-}
-
-#content a {
-  color:rgb(115, 6, 183);
-  text-decoration:none;
-}
-#content a:hover {
-  border-bottom:1px dotted;
-}
-#content a:active {
-  color:Red;
-}
-
-.imagepluscontainer{ /* main image container */
-position: relative;
-z-index: 1;
-}
-
-.imagepluscontainer img{ /* CSS for image within container */
-position: relative;
-z-index: 2;
--moz-transition: all 0.3s ease; /* Enable CSS3 transition on all props */
--webkit-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-}
-.imagepluscontainer div.desc{ /* CSS for desc div of each image. */
-position: absolute;
-top:5px;
-width: 90%;
-z-index: 1; /* Set z-index to that less than image's, so it's hidden beneath it */
-opacity:0;
-font-size:0.75em;
-font-family:sans-serif;
-font-style:normal;
--moz-transition: all 0.3s ease 0.3s; /* Enable CSS3 transition on desc div. Final 0.5s value is the delay before animation starts */
--webkit-transition: all 0.3s ease 0.3s;
--o-transition: all 0.3s ease 0.3s;
--ms-transition: all 0.3s ease 0.3s;
-transition: all 0.3s ease 0.3s;
-}
-.imagepluscontainer:hover div.desc{ /* CSS for desc div when mouse hovers over main container */
--moz-transform: translate(0, 100%);
--webkit-transform: translate(0, 100%);
--ms-transform: translate(0, 100%);
--o-transform: translate(0, 100%);
-transform: translate(0, 100%);
-opacity:1; /* Reveal desc DIV fully */
-}
-.imagepluscontainer div.leftslide{
-width: 200px;  /* reset from default */
-/*padding-left:15px;*/
-}
-.imagepluscontainer:hover div.leftslide{
--moz-transform: translate(-100%, 0);
--webkit-transform: translate(-100%, 0);
--ms-transform: translate(-100%, 0);
--o-transform: translate(-100%, 0);
-transform:translate(-100%, 0);
-}
-  
-
 
 
 
