@@ -1,0 +1,208 @@
+\documentclass[11pt]{article}
+
+%%%%% tables and lists %%%%%
+\usepackage{array} % more control over column styles
+\usepackage{longtable} % break table across page
+  \setlength{\LTpre}{0pt}
+  % \setlength{\LTpost}{0pt}
+\renewcommand{\arraystretch}{1.25} % extra space between rows
+
+%%% array columns without spaces
+\newcolumntype{L}{@{}p{0.1\textwidth}@{}}
+\newcolumntype{R}{@{}p{0.9\textwidth}@{}}
+% \newcolumntype{C}{@{}c@{}}
+
+%%% titles, lists
+\usepackage{sectsty} % customize section title appearance
+  \allsectionsfont{\normalsize}
+\usepackage{enumitem}
+  \setlist[itemize]{label=,leftmargin=\parindent,itemsep=0.25em}
+
+
+%%%%% layout and formatting %%%%%
+
+%%% general margins
+\usepackage[margin=1in]{geometry}
+\setlength{\parindent}{0pt}
+% \setlength{\parskip}{0pt}
+
+%%% font preferences
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{libertine}
+\usepackage[libertine,liby,bigdelims,nosymbolsc]{newtxmath}
+
+%%% links
+\RequirePackage[usenames]{xcolor}
+\definecolor{splinkcolor}{rgb}{0.0,0.2,0.4}
+\RequirePackage[colorlinks,breaklinks,
+                linkcolor=splinkcolor, 
+                urlcolor=splinkcolor, 
+                citecolor=splinkcolor,
+                filecolor=splinkcolor,
+                plainpages=false,
+                pdfpagelabels,
+                bookmarks=false,
+                pdfstartview=FitH]{hyperref}
+\newcommand{\doi}[1]{\url{http://dx.doi.org/#1}}
+\urlstyle{rm}
+
+%%% macros
+\newcommand{\with}{\&}
+
+
+
+\begin{document}
+
+\textbf{Dylan Bumford}
+
+\bigskip
+
+New York University, Department of Linguistics\hfill
+{\color{gray}[last updated: 10/1/2015]}\\
+10 Washington Pl, New York, NY 10003\\
+email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}\\
+web: \url{dylanbumford.com}
+
+\bigskip
+
+\section*{Education}
+
+\begin{longtable}{LR}
+  2016        & Ph.D.~Linguistics, New York University\\
+  2014--15    & Visiting Researcher, Stanford University\\
+  2010        & B.S.~Psychology, University of Texas at Austin\\
+  2010        & B.A.~Mathematics, Linguistics, and Plan II Honors, University of
+                Texas at Austin
+\end{longtable}
+
+\section*{Publications}
+
+\begin{longtable}{LR}
+  2015 & Bumford, Dylan. Incremental quantification and the dynamics of
+         pair-list phenomena. \textit{Semantics and Pragmatics} 8(9), 1--70.
+         DOI: \doi{10.3765/sp.8.9}\\
+  %
+  2015 & Destruel, Emilie, Edgar Onea, Dan Velleman, Dylan Bumford,
+         \with~David Beaver. A cross-linguistic study of the non-at-issueness
+         of exhaustive inferences. In Florian Schwarz (ed.)
+         \textit{Experimental Perspectives on Presuppositions}. Springer,
+         Dordrecht.\\
+  %
+  2014 & Bumford, Dylan. Universal quantification as iterated dynamic
+         conjunction. In {Proceedings of the 19th Amsterdam Colloquium},
+         67--74.\\
+  %
+  2013 & Bumford, Dylan \with~Chris Barker. Association with distributivity
+         and the problem of multiple licensors for singular
+         \textit{different}. \textit{Linguistics and Philosophy} 36(5),
+         355--369. DOI: \doi{10.1007/s10988-013-9139-z}\\ % chktex 8
+  %
+  2012 & Velleman, Dan, David Beaver, Emilie Destruel, Dylan Bumford, Edgar
+         Onea, and Elizabeth Coppock. It-clefts are IT (inquiry-terminating)
+         constructions. In \textit{Proceedings of Semantics and Linguistic
+         Theory 22}, 441--460. DOI: \doi{10.3765/salt.v22i0.2640}
+\end{longtable}
+
+
+\section*{Presentations}
+
+\begin{longtable}{LR}
+  2015 & Temporal modification without pronouns. Invited talk, NYU
+         Continuations and Scope Workshop.\\
+  % 
+  2015 &  Adjectives of comparison. Invited talk, UCSC S-Circle (with Chris
+          Barker).\\
+  % 
+  2014 &  Incremental quantification and the dynamics of pair-list phenomena.
+          Invited talk, Stanford Construction of Meaning Workshop.\\
+  % 
+  2013 &  Universal quantification as iterated dynamic conjunction. \textit{19th
+          Amsterdam Colloquium}.\\
+  % 
+  2013 &  Generalized association with distributivity. \textit{Semantics and
+          Linguistic Theory 23} (with Chris Barker).\\
+  %
+  2012 &  It-clefts are IT (inquiry-terminating) constructions.
+          \textit{Semantics and Linguistic Theory 22} (with Dan Velleman,
+          David Beaver, Emilie Destruel, Edgar Onea, and Elizabeth Coppock).\\
+  % 
+  2011 &  ``Yes, but\dots'' --- Exhaustivity and at-issueness across languages.
+          \textit{Workshop on Projection, Entailment, Presupposition, and
+          Assertion} (with Dan Velleman, David Beaver, Emilie Destruel, and
+          Edgar Onea).\\
+  % 
+  2009 &  Effects of grammatical form and familiarity on metaphor
+          comprehension. \textit{Metaphor Festival}, Stockholm (with Lauretta Reeves).
+\end{longtable}
+
+
+\section*{Honors and Awards}
+
+\begin{longtable}{LR}
+  2013--16 & National Science Foundation Graduate Research
+             Fellowship\newline
+             \hspace*{0.5cm}\textendash\
+             3-year grant covering tuition, research expenses, and living
+             stipend\\
+  %
+  2011--16 & Henry M. MacCracken Fellowship\newline
+             \hspace*{0.5cm}\textendash\
+             5-year funding package from NYU\\
+ 
+  2011     & George H. Mitchell Grand Prize for Academic Research\newline
+             \hspace*{0.5cm}\textendash\
+             \$20,000 prize awarded to one UT undergraduate per year for
+             thesis research\\
+  %
+  2012     & Summa Cum Laude, University of Texas at Austin\\
+\end{longtable}
+
+\section*{Teaching}
+
+\begin{longtable}{LR}
+  2015 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
+         30 students\\
+  %
+  2015 & Co-instructor with Chris Barker at the 2015 European Summer School in
+         Logic, Language, and Information (Barcelona), ``Monads and Natural
+         Language''\\
+  %
+  2013 & Teaching Assistant for Anna Szabolcsi and Brian McElree,
+         ``Language and Mind'', 70 students\\
+  %
+  2013 & Teaching Assistant for Mark Baltin, ``Grammatical Analysis'', 25
+         students\\
+  %
+  2009 & Teaching Assistant for David Beaver, ``Mind and Reason'', 20 students\\
+  %
+  2008 & Teaching Assistant for Robert Pitman, ``Punishment in Society'', 10 students
+\end{longtable}
+
+\section*{Service and Experience}
+
+\begin{longtable}{LR}
+  2015       & Referee, \textit{Logic and Engineering of Natural Language
+               Semantics 12}\\
+  2013--15   & Organizer, NYU Semantics Group\\
+  2013--14   & Program Comittee, \textit{Semantics and Linguistic Theory 24}\\
+  2013       & Software Development, The Lambda Calculator\newline
+               \hspace*{0.5cm}\textendash\
+               Pedagogical tool to assist in teaching the lambda calculus\\
+  2012       & Referee, \textit{Semantics \with~Pragmatics}\\
+  2012       & Research Assistant, Stephanie Harves\\
+  2009--11   & Research Assistant, David Beaver\\
+\end{longtable}
+
+\section*{Skills}
+
+\begin{itemize}[itemsep=0pt]
+\item
+  Haskell, Java, Python
+\item
+  Html, CSS, Javascript
+\item
+  R, Matlab, Mechanical Turk
+\end{itemize}
+
+\end{document}
