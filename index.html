@@ -3,8 +3,13 @@
 <html>
 <head>
   <title>Dylan Bumford</title>
-  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-  <script type='text/javascript' src='js/dylnb.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.8.3.min.js"
+          integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+          crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> -->
+  <!-- <script type='text/javascript' src='js/dylnb.min.js'></script> -->
   <link href="css/dylnb.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic'
         rel='stylesheet' type='text/css'>
@@ -12,6 +17,27 @@
         rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic'
         rel='stylesheet' type='text/css'>
+  <script type="text/javascript">
+    jQuery(function(){
+      function e(){
+        jQuery(this).parents("#menuoption:first").find("a").removeClass("selected").end().end().addClass("selected")
+      }
+      function t(t){
+        var n=jQuery("#menuoption").find('a[href$="'+t.id+'"]').get(0);e.call(n)
+      }
+      jQuery.easing.easeOutExpo=function(e,t,n,r,i){
+        return t==i?n+r:r*(-Math.pow(2,-10*t/i)+1)+n
+      };
+      jQuery("#menuoption").find("a").click(e);
+      if(window.location.hash){
+        t({id:window.location.hash.substr(1)})
+      } else{
+        jQuery("#menuoption a:first").click()
+      }
+      jQuery.localScroll.defaults.axis="xy";
+      jQuery.localScroll({target:"#content",queue:true,duration:600,hash:true,easing:"easeOutExpo",onAfter:t})
+    })
+  </script>
 </head>
 <body>
   <div id="nav">
