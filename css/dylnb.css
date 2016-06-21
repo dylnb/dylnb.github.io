@@ -123,7 +123,7 @@ span.iconbox a:hover {
 /* for smooth scroll transition effect */
 .pane {
   width:40em;
-  height:36em;
+  /* height:36em; */
   float:left;
   position:relative;
   overflow:auto;
@@ -132,14 +132,14 @@ span.iconbox a:hover {
 #content {
   text-align:justify;
   width:40em;
-  height:36em;
+  /* height:36em; */
   position:relative;
   overflow:hidden;
 }
 
 #panewrapper {
   width:160em;
-  height:36em;
+  /* height:36em; */
   position:relative;
   overflow:hidden;
 }
