@@ -1,36 +1,40 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 %%%%% tables and lists %%%%%
 \usepackage{array} % more control over column styles
 \usepackage{longtable} % break table across page
   \setlength{\LTpre}{0pt}
   % \setlength{\LTpost}{0pt}
-\renewcommand{\arraystretch}{1.25} % extra space between rows
-
-%%% array columns without spaces
-\newcolumntype{L}{@{}p{0.1\textwidth}@{}}
-\newcolumntype{R}{@{}p{0.9\textwidth}@{}}
-% \newcolumntype{C}{@{}c@{}}
-
-%%% titles, lists
-\usepackage{sectsty} % customize section title appearance
-  \allsectionsfont{\normalsize}
+\renewcommand{\arraystretch}{1.5} % extra space between rows
+\usepackage{linegoal} % find length to end of line
 \usepackage{enumitem}
   \setlist[itemize]{label=,leftmargin=\parindent,itemsep=0.25em}
+
+%%% array columns without spaces
+\newcolumntype{L}{@{}p{0.11\textwidth}@{}}
+\newcolumntype{R}{@{}p{0.89\textwidth}@{}}
+% \newcolumntype{C}{@{}c@{}}
+
+%%% titles
+\usepackage{sectsty} % customize section title appearance
+  \allsectionsfont{\normalsize}
 
 
 %%%%% layout and formatting %%%%%
 
 %%% general margins
-\usepackage[vmargin=0.95in,hmargin=1in]{geometry}
+\usepackage[margin=1in]{geometry}
 \setlength{\parindent}{0pt}
 % \setlength{\parskip}{0pt}
 
 %%% font preferences
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{libertine}
-\usepackage[libertine,liby,bigdelims,nosymbolsc]{newtxmath}
+\usepackage[full]{textcomp}
+\usepackage[scaled]{garamondx} % defaults to lining figures, good for math
+\usepackage[varqu,varl]{zi4} % typewriter font inconsolata
+\usepackage[sf]{libertine} % biolinum as sans-serif
+\usepackage[garamondx,cmbraces]{newtxmath}
+\useosf% changes figure style in garamondx to osf for text, not math
+\usepackage{microtype}
 
 %%% links
 \RequirePackage[usenames]{xcolor}
@@ -63,52 +67,73 @@
 New York University, Department of Linguistics\\
 10 Washington Pl, New York, NY 10003
 \end{minipage}
-\begin{minipage}[t]{0.45\textwidth}
-email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}\\
-web: \url{dylanbumford.com}
+\begin{minipage}[t]{\linegoal}
+\raggedleft%
+web: \url{dylanbumford.com}\\
+email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
 \end{minipage}
 
 %\smallskip
 
 \section*{Education}
 
+\begingroup
+\renewcommand{\arraystretch}{1} % extra space between rows
 \begin{longtable}{LR}
-  2016 exp.   & Ph.D.~Linguistics, New York University\\
+  2017 exp.   & Ph.D.~Linguistics, New York University\\
   2014--15    & Visiting Researcher, Stanford University\\
   2010        & B.S.~Psychology, University of Texas at Austin\\
   2010        & B.A.~Mathematics, Linguistics, and Plan II Honors, University of
                 Texas at Austin
 \end{longtable}
+\endgroup
+
+\section*{In Progress}
+
+\begin{longtable}{@{}p{\textwidth}@{}}
+  %
+  Bumford, Dylan. Split-scope definites: Relative exclusives and
+  Anti-uniqueness readings. In prep.\\
+  %
+  Champollion, Lucas, Dylan Bumford, \with~Robert Henderson. Homogeneity in
+  donkey anaphora. In prep.
+\end{longtable}
 
 \section*{Publications}
 
 \begin{longtable}{LR}
-  Subm. & Bumford, Dylan. Split-scope definites: Relative superlatives and
-          Haddock descriptions.\\
+  %
+  ---   & Bumford, Dylan. Split-scope definites: Relative superlatives and
+          Haddock descriptions. \textit{Linguistics and Philosophy}, accepted
+          with minor revisions.\\
   %
   2015  & Bumford, Dylan. Incremental quantification and the dynamics of
           pair-list phenomena. \textit{Semantics and Pragmatics} 8(9), 1--70.
-          DOI: \doi{10.3765/sp.8.9}\\
+          \doi{10.3765/sp.8.9}\\
   %
   2015  & Destruel, Emilie, Dan Velleman, Edgar Onea, Dylan Bumford, Jingyang Xue
           \with~David Beaver. A cross-linguistic study of the non-at-issueness
           of exhaustive inferences. In Florian Schwarz (ed.)
           \textit{Experimental Perspectives on Presuppositions}. Springer,
-          Dordrecht. DOI: \doi{10.1007/978-3-319-07980-6_6}\\
+          Dordrecht.
+          \doi{10.1007/978-3-319-07980-6_6}\\ % chktex 8
   %
   2014  & Bumford, Dylan. Universal quantification as iterated dynamic
           conjunction. In \textit{Proceedings of the 19th Amsterdam
-          Colloquium}, 67--74.\\
+          Colloquium}, 67--74.
+          \url{http://www.illc.uva.nl/AC/AC2013/uploaded_files/inlineitem/09_Bumford.pdf}\\
   %
   2013  & Bumford, Dylan \with~Chris Barker. Association with distributivity
           and the problem of multiple licensors for singular
           \textit{different}. \textit{Linguistics and Philosophy} 36(5),
-          355--369. DOI: \doi{10.1007/s10988-013-9139-z}\\ % chktex 8
+          355--369.
+          \doi{10.1007/s10988-013-9139-z}\\ % chktex 8
   %
   2012  & Velleman, Dan, David Beaver, Emilie Destruel, Dylan Bumford, Edgar
           Onea \with~Elizabeth Coppock. It-clefts are IT (inquiry-terminating)
           constructions. In \textit{Proceedings of Semantics and Linguistic
-          Theory 22}, 441--460. DOI: \doi{10.3765/salt.v22i0.2640}
+          Theory 22}, 441--460.
+          \doi{10.3765/salt.v22i0.2640}
 \end{longtable}
 
 
@@ -138,7 +163,7 @@ web: \url{dylanbumford.com}
           Invited talk, Stanford Construction of Meaning Workshop.\\
   % 
   2013 &  Universal quantification as iterated dynamic conjunction. \textit{19th
-          Amsterdam Colloquium}.\\
+          Amsterdam Colloquium}. \\
   % 
   2013 &  Generalized association with distributivity. \textit{Semantics and
           Linguistic Theory 23}, UCSC (with Chris Barker).\\
@@ -186,7 +211,10 @@ web: \url{dylanbumford.com}
 \section*{Teaching}
 
 \begin{longtable}{LR}
-  2015, 16 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
+  2016 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
+         35 students\\
+  %
+  2015 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
          30 students\\
   %
   2015 & Co-instructor with Chris Barker at the 2015 European Summer School in
@@ -207,6 +235,7 @@ web: \url{dylanbumford.com}
 \section*{Service and Experience}
 
 \begin{longtable}{LR}
+  2016       & Referee, \textit{Journal of Semantics}\\
   2015       & Referee, \textit{Logic and Engineering of Natural Language
                Semantics 12}\\
   2013--16   & Organizer, NYU Semantics Group\\
