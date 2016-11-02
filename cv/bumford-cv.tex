@@ -28,13 +28,35 @@
 % \setlength{\parskip}{0pt}
 
 %%% font preferences
-\usepackage[full]{textcomp}
-\usepackage[scaled]{garamondx} % defaults to lining figures, good for math
-\usepackage[varqu,varl]{zi4} % typewriter font inconsolata
-\usepackage[sf]{libertine} % biolinum as sans-serif
-\usepackage[garamondx,cmbraces]{newtxmath}
-\useosf% changes figure style in garamondx to osf for text, not math
+\usepackage{iftex} % conditional on compilation engine
+\usepackage[LGR,T1]{fontenc}
+\ifPDFTeX%
+  \usepackage[utf8]{inputenc}
+\else
+  \usepackage[no-math]{fontspec}
+  \DeclareTextCommand{\nobreakspace}{T1}{\leavevmode\nobreak\ }
+\fi
+\usepackage[varqu,varl]{zi4} % inconsolata as typewriter
+\usepackage[type1]{biolinum} % biolinum as sans-serif
+\usepackage{cochineal} % cochineal (crimson) for roman
+% \let\digamma\relax
+% \usepackage[%
+%   scaled,
+%   stdmathdigits=true,
+%   stdmathitalics=true
+% ]{lucimatx}  
+\usepackage{substitutefont}
+\usepackage[greek,english]{babel}
+\substitutefont{LGR}{\rmdefault}{Cochineal-LF}
+\usepackage[cochineal,bigdelims]{newtxmath}
+\usepackage[cal=cm,scr=boondoxo,frak=lucida,bb=lucida]{mathalfa}
+\useosf%
+% \useproportional
 \usepackage{microtype}
+
+%%% tikz
+\usepackage{tikz}
+\usetikzlibrary{tikzmark,calc}
 
 %%% links
 \RequirePackage[usenames]{xcolor}
@@ -92,21 +114,30 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
 
 \begin{longtable}{@{}p{\textwidth}@{}}
   %
-  Bumford, Dylan. Split-scope definites: Relative exclusives and
-  Anti-uniqueness readings. In prep.\\
+  Bumford, Dylan. Split-scope effects in definite descriptions. PhD
+  Dissertation, New York University.\newline
+  Advisor: Chris Barker\newline
+  Committee: Anna Szabolcsi, Adrian Brasoveanu, Simon Charlow, Philippe
+  Schlenker\\
   %
-  Champollion, Lucas, Dylan Bumford, \with~Robert Henderson. Homogeneity in
+  Bumford, Dylan. Not the only game in town: Relative and indeterminate exclusive
+  descriptions. Submitted to \textit{Journal of Semantics}.\\
+  %
+  Champollion, Lucas, Dylan Bumford, \with~Robert Henderson. Homogeneous 
   donkey anaphora. In prep.
 \end{longtable}
 
-\section*{Publications}
+\section*{Publications \ \textrm{(\textdagger ${}={}$ refereed journal)}} 
 
 \begin{longtable}{LR}
   %
-  ---   & Bumford, Dylan. Split-scope definites: Relative superlatives and
+  \tikzmark{p1}%
+  2017 exp.
+        & Bumford, Dylan. Split-scope definites: Relative superlatives and
           Haddock descriptions. \textit{Linguistics and Philosophy}, accepted
           with minor revisions.\\
   %
+  \tikzmark{p2}%
   2015  & Bumford, Dylan. Incremental quantification and the dynamics of
           pair-list phenomena. \textit{Semantics and Pragmatics} 8(9), 1--70.
           \doi{10.3765/sp.8.9}\\
@@ -123,6 +154,7 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
           Colloquium}, 67--74.
           \url{http://www.illc.uva.nl/AC/AC2013/uploaded_files/inlineitem/09_Bumford.pdf}\\
   %
+  \tikzmark{p3}%
   2013  & Bumford, Dylan \with~Chris Barker. Association with distributivity
           and the problem of multiple licensors for singular
           \textit{different}. \textit{Linguistics and Philosophy} 36(5),
@@ -134,6 +166,12 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
           constructions. In \textit{Proceedings of Semantics and Linguistic
           Theory 22}, 441--460.
           \doi{10.3765/salt.v22i0.2640}
+  %
+  \begin{tikzpicture}[overlay,remember picture]
+  \node at ($({pic cs:p1}) +(-0.3,0.1)$) {\textdagger};
+  \node at ($({pic cs:p2}) +(-0.3,0.1)$) {\textdagger};
+  \node at ($({pic cs:p3}) +(-0.3,0.1)$) {\textdagger};
+  \end{tikzpicture}
 \end{longtable}
 
 
@@ -192,13 +230,13 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
              3-year grant covering tuition, research expenses, and living
              stipend\\
   %
-  2013     & NYU Curricular Development Challenge Fund\newline
+  2013     & NYU Curricular Development Challenge Fund (with Lucas Champollion, PI)\newline
              \hspace*{0.5cm}\textendash\
              \$4,800 grant to develop pedagogical software for semantics courses\\
   %
   2011--16 & Henry M. MacCracken Fellowship\newline
              \hspace*{0.5cm}\textendash\
-             5-year funding package from NYU\\
+             5-year funding package from NYU, including tuition and stipend\\
   % 
   2011     & George H. Mitchell Grand Prize for Academic Research\newline
              \hspace*{0.5cm}\textendash\
@@ -212,7 +250,10 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
 
 \begin{longtable}{LR}
   2016 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
-         35 students\\
+         35 students\newline
+         \hspace*{0.5cm}\textendash\
+         5 primary lectures, weekly recitation sections, creation of assignments
+         and exams\\
   %
   2015 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
          30 students\\
@@ -239,7 +280,7 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
   2015       & Referee, \textit{Logic and Engineering of Natural Language
                Semantics 12}\\
   2013--16   & Organizer, NYU Semantics Group\\
-  2013--14   & Program Comittee, \textit{Semantics and Linguistic Theory 24}\\
+  2013--14   & Program Committee, \textit{Semantics and Linguistic Theory 24}\\
   2013       & Software Development, The Lambda Calculator\newline
                \hspace*{0.5cm}\textendash\
                Pedagogical tool to assist in teaching the lambda calculus\\
