@@ -36,6 +36,10 @@ ul {
   line-height: 140%;
 }
 
+#research ul li {
+  text-align: left;
+}
+
 #content a {
   color:rgb(115, 6, 183);
   border-bottom:1px dotted;
@@ -129,6 +133,10 @@ span.iconbox a:hover {
 
 span.pubtitle {
   font-weight: bold;
+}
+
+a > span.pubtitle {
+  font-weight: normal;
 }
 
 table {
