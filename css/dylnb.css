@@ -115,7 +115,16 @@ span.iconbox a:hover {
   height: 100%;
 }
 
+iframe {
+  margin-left: -20%;
+  width: 120%;
+}
+
 @media (min-width: 550px) {
+  iframe {
+    margin-left: -10%;
+    width: 110%;
+  }
   #nav {
     text-align: center;
   }
@@ -146,10 +155,6 @@ span.iconbox a:hover {
 
 .resources:hover {
   background-image:url(../images/code-light2.png);
-}
-
-iframe {
-  margin-left: -20%;
 }
 
 .misc:hover {
