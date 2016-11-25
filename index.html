@@ -1,23 +1,43 @@
-<!DOCTYPE html>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- <meta http&#45;equiv="Content&#45;Type" name="viewport" content="width=device&#45;width,initial&#45;scale=1"> -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
   <title>Dylan Bumford</title>
+  <!-- <meta name="description" content=""> -->
+  <!-- <meta name="author" content=""> -->
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+  <link rel="stylesheet" href="css/dylnb.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- JS for scrolling
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
   <script src="https://code.jquery.com/jquery-1.8.3.min.js"
           integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
           crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
-  <!-- <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> -->
-  <!-- <script type='text/javascript' src='js/dylnb.min.js'></script> -->
-  <link href="css/dylnb.css" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic'
-        rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400,400italic'
-        rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic'
-        rel='stylesheet' type='text/css'>
   <script type="text/javascript">
     jQuery(function(){
       function e(){
@@ -40,26 +60,31 @@
     })
   </script>
 </head>
+
+
 <body>
-  <div id="nav">
-    <div class="button research">
+  <div class="container">
+  <div class="row">
+
+  <div class="four columns" id="nav">
+    <div class="nav-button research">
       <a href="#research">RESEARCH</a>
     </div>
 
-    <div class="button resources">
+    <div class="nav-button resources">
       <a href="#resources">RESOURCES</a>
     </div>
 
-    <div class="button about">
+    <div class="nav-button about">
       <a href="#about">ABOUT</a>
     </div>
 
-    <div class="button misc">
+    <div class="nav-button misc">
       <a href="#misc">MISC</a>
     </div>
   </div>
 
-  <div id="content">
+  <div class="eight columns" id="content">
     <div id="panewrapper">
       <ul>
         <li id="research" class="pane">
@@ -446,7 +471,7 @@
 
           <iframe name="ngram_chart"
           src="https://books.google.com/ngrams/interactive_chart?content=more%2Cless&year_start=1800&year_end=2000&corpus=15&smoothing=3&share=&direct_url=t1%3B%2Cmore%3B%2Cc0%3B.t1%3B%2Cless%3B%2Cc0"
-        width=100% height=225 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
+        width=100% height=225px marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
         </li>
       </ul>
     </div>
@@ -462,5 +487,9 @@
   ga('create', 'UA-49477401-1', 'dylanbumford.com');
   ga('send', 'pageview');
   </script>
+
+  </div> <!-- row -->
+  </div> <!-- container -->
 </body>
+
 </html>
