@@ -89,9 +89,16 @@ span.iconbox a:hover {
 /* spotlight circles thanks to Liz: lizwong.com :) */
 #nav {
   position: relative;
+  /* position: fixed; */
+  /* z-index: 1; */
   /* text-align: center; */
 }
 
+/* #nav-dup { */
+/*   position: relative */
+/*   visibility: hidden; */
+/* } */
+/*  */
 .nav-button {
   display: inline-block;
   height: 75px;
@@ -125,6 +132,9 @@ iframe {
     margin-left: -10%;
     width: 110%;
   }
+  /* #nav-dup { */
+  /*   display: none; */
+  /* } */
   #nav {
     text-align: center;
   }
@@ -137,6 +147,9 @@ iframe {
     line-height: 125px;
     font-size: 18px;
   }
+  /* #content { */
+  /*   margin-left: 34.6666667% */
+  /* } */
 }
 
 .nav-button:hover{
@@ -167,9 +180,9 @@ span.pubtitle {
   font-weight: bold;
 }
 
-a > span.pubtitle {
-  font-weight: normal;
-}
+/* a > span.pubtitle { */
+/*   font-weight: normal; */
+/* } */
 
 /* LAYOUT */
 
