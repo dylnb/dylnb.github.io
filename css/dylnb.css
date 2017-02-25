@@ -49,7 +49,8 @@ ul {
 }
 
 #content a {
-  color:rgb(115, 6, 183);
+  /* color:rgb(115, 6, 183); */
+  color: #3284BF;
   /* border-bottom:1px dotted; */
   border-bottom: none;
   text-decoration:none;
@@ -58,7 +59,7 @@ ul {
   border-bottom:2px solid;
 }
 #content a:active {
-  color:Red;
+  color: #FFE800;
 }
  
 /* corner icons */
@@ -106,6 +107,7 @@ span.iconbox a:hover {
   width: 75px;
   border-radius: 100%;
   border: 4px solid #000;
+  border-color: #3284BF;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -117,7 +119,8 @@ span.iconbox a:hover {
   line-height: 75px;
   position: relative;
   font-size: 12px;
-  color: #000;
+  /* color: #000; */
+  color: #3284BF;
   display: block;
   width: 100%;
   height: 100%;
