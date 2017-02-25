@@ -107,7 +107,7 @@ span.iconbox a:hover {
   width: 75px;
   border-radius: 100%;
   border: 4px solid #000;
-  border-color: #3284BF;
+  /* border-color: #3284BF; */
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -119,8 +119,8 @@ span.iconbox a:hover {
   line-height: 75px;
   position: relative;
   font-size: 12px;
-  /* color: #000; */
-  color: #3284BF;
+  color: #000;
+  /* color: #3284BF; */
   display: block;
   width: 100%;
   height: 100%;
