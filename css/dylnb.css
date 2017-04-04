@@ -103,10 +103,10 @@ span.iconbox a:hover {
 /*  */
 .nav-button {
   display: inline-block;
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 60px;
   border-radius: 100%;
-  border: 4px solid #000;
+  border: 3px solid #000;
   /* border-color: #3284BF; */
   text-align: center;
   text-decoration: none;
@@ -114,11 +114,15 @@ span.iconbox a:hover {
   /* margin:0.5em; */
 }
 
+.nav-button:hover{
+  border:3px solid rgba(0,0,0, 0.25);
+}
+
 .nav-button a {
   text-decoration: none;
-  line-height: 75px;
+  line-height: 60px;
   position: relative;
-  font-size: 12px;
+  font-size: 10px;
   color: #000;
   /* color: #3284BF; */
   display: block;
@@ -129,6 +133,31 @@ span.iconbox a:hover {
 iframe {
   margin-left: -20%;
   width: 120%;
+}
+
+@media (min-device-width : 375px) {
+  .nav-button {
+    height: 70px;
+    width: 70px;
+    border-width: 4px;
+  }
+  .nav-button:hover {
+    border-width: 4px;
+  }
+  .nav-button a {
+    line-height: 70px;
+    font-size: 12px;
+  }
+}
+
+@media (min-device-width: 412px) {
+  .nav-button {
+    height: 75px;
+    width: 75px;
+  }
+  .nav-button a {
+    line-height: 75px;
+  }
 }
 
 @media (min-width: 550px) {
@@ -154,10 +183,6 @@ iframe {
   /* #content { */
   /*   margin-left: 34.6666667% */
   /* } */
-}
-
-.nav-button:hover{
-  border:4px solid rgba(0,0,0, 0.25);
 }
 
 .about:hover {
