@@ -50,6 +50,7 @@ ul {
 
 #content a {
   /* color:rgb(115, 6, 183); */
+  /* color: rgb(52, 134, 190); */
   color: #3284BF;
   /* border-bottom:1px dotted; */
   border-bottom: none;
@@ -61,7 +62,7 @@ ul {
 #content a:active {
   color: #FFE800;
 }
- 
+
 /* corner icons */
 #emtext {
   display: none;
