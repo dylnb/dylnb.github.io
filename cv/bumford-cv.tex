@@ -5,7 +5,7 @@
 \usepackage{longtable} % break table across page
   \setlength{\LTpre}{0pt}
   % \setlength{\LTpost}{0pt}
-\renewcommand{\arraystretch}{1.5} % extra space between rows
+  \renewcommand{\arraystretch}{1.25} % row spacing
 \usepackage{linegoal} % find length to end of line
 \usepackage{enumitem}
   \setlist[itemize]{label=,leftmargin=\parindent,itemsep=0.25em}
@@ -18,7 +18,11 @@
 %%% titles
 % \usepackage{sectsty} % customize section title appearance
 %   \allsectionsfont{\normalsize}
-\usepackage[tiny,compact]{titlesec}
+\usepackage[compact]{titlesec}
+  \titleformat*{\section}{\small\bfseries\MakeTextUppercase}
+  \titleformat*{\subsection}{\bfseries\color{gray}}
+\usepackage{textcase}
+\usepackage{needspace}
 
 
 %%%%% layout and formatting %%%%%
@@ -61,7 +65,7 @@
 
 %%% links
 \RequirePackage{xcolor}
-\definecolor{splinkcolor}{rgb}{0.0,0.2,0.4}
+\definecolor{splinkcolor}{RGB}{50, 132, 191}
 \RequirePackage[colorlinks,breaklinks,
                 linkcolor=splinkcolor, 
                 urlcolor=splinkcolor, 
@@ -76,7 +80,7 @@
 
 %%% macros
 \newcommand{\with}{\&}
-
+\newcommand{\refmark}{\textcolor{gray}{\textdagger}}
 
 
 \begin{document}
@@ -87,153 +91,192 @@
 \bigskip
 
 \begin{minipage}[t]{0.55\textwidth}
-New York University, Department of Linguistics\\
-10 Washington Pl, New York, NY 10003
+UCLA, Department of Linguistics\\
+3125 Campbell Hall, Los Angeles, CA 90095
 \end{minipage}
 \begin{minipage}[t]{\linegoal}
 \raggedleft%
 web: \url{dylanbumford.com}\\
-email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
+email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 \end{minipage}
 
+\bigskip
 \bigskip
 
 \section*{Education}
 
-\begingroup
-\renewcommand{\arraystretch}{1} % extra space between rows
 \begin{longtable}{LR}
-  2017 exp.   & Ph.D.~Linguistics, New York University\\
+  2017        & Ph.D.~Linguistics, New York University\newline
+                Dissertation: Split-scope effects in definite descriptions\newline
+                Chair: Chris Barker
+                % Committee: Anna Szabolcsi, Adrian Brasoveanu, Simon Charlow, Philippe Schlenker\\
+                \\
   2014--15    & Visiting Researcher, Stanford University\\
   2010        & B.S.~Psychology, University of Texas at Austin\\
   2010        & B.A.~Mathematics, Linguistics, and Plan II Honors, University of
                 Texas at Austin
 \end{longtable}
-\endgroup
 
 \medskip
 
-\section*{In Progress}
+\section*{Employment}
 
-\begin{longtable}{@{}p{\textwidth}@{}}
-  %
-  Split-scope effects in definite descriptions. PhD Dissertation, New York
-  University.\newline
-  Chair: Chris Barker\newline
-  Committee: Anna Szabolcsi, Adrian Brasoveanu, Simon Charlow, Philippe
-  Schlenker\\
-  %
-  Homogeneity in donkey anaphora. With Lucas Champollion and Robert
-  Henderson. Submitted to \textit{Journal of Semantics}.\\
-  %
-  Strict and sloppy readings of relative descriptions: Adjectives don't take
-  scope alone. In prep.
+\begin{longtable}{LR}
+  2017--    & Assistant Professor\newline
+              University of California, Los Angeles, Department of Linguistics
 \end{longtable}
 
 \medskip
 
-\section*{Publications \ \textrm{(\textdagger ${}={}$ refereed journal)}} 
+\section*{Publications \
+  \NoCaseChange{\normalsize\mdseries\color{gray} (\refmark\ $=$\ refereed
+    journal)}
+}
 
+\begingroup
+\renewcommand{\arraystretch}{1.5} % more space between rows
 \begin{longtable}{LR}
   %
-  \tikzmark{p4}%
-  2017 exp. & Not the only game in town: Relative and indeterminate exclusive
-              descriptions. \textit{Journal of Semantics}, under revision.\\
+  \begin{tikzpicture}[overlay,remember picture]
+  \node at ($({pic cs:p5}) +(-0.3,0.1)$) {\refmark};
+  \node at ($({pic cs:p3}) +(-0.3,0.1)$) {\refmark};
+  \node at ($({pic cs:p2}) +(-0.3,0.1)$) {\refmark};
+  \end{tikzpicture}
+  %
+  % \tikzmark{p4}%
+  In prep.  & Not the only game in town: Relative and indeterminate exclusive
+              descriptions.\newline
+              \textit{Journal of Semantics}, under revision.\\
+  %
+  In prep.  & Strict and sloppy readings of relative descriptions.\\
+  %
+  % \begin{tikzpicture}[overlay,remember picture]
+  % \node at ($({pic cs:p4}) +(-0.3,0.1)$) {\refmark};
+  % \end{tikzpicture}
+  %
+  \tikzmark{p5}%
+  2018  & Donkeys under discussion.\newline
+              With Lucas Champollion and Robert Henderson.\newline
+              \textit{Semantics and Pragmatics}, accepted.\\
+  %
+  2017  & Parsing with Dynamic Continuized CCG.\newline
+          With Michael White, Jordan Needle, and Simon Charlow.\newline
+          \textit{13th International Workshop on Tree-Adjoining Grammar and
+          Related Formalisms}, 71--83.\newline
+          \url{http://www.aclweb.org/anthology/W17-6208}\\
   %
   \tikzmark{p3}%
-  2017 exp. & Split-scope definites: Relative superlatives and Haddock
-              descriptions. \textit{Linguistics and Philosophy}, accepted
-              pending approval of minor revisions.\\
+  2017  & Split-scope definites: Relative superlatives and Haddock
+          descriptions.\newline
+          \textit{Linguistics and Philosophy} 40(6), 549--93.\newline
+          \doi{10.1007/s10988-017-9210-2}\\
   %
   \tikzmark{p2}%
-  2015  & Incremental quantification and the dynamics of pair-list phenomena.
-          \textit{Semantics and Pragmatics} 8(9), 1--70.
+  2015  & Incremental quantification and the dynamics of pair-list phenomena.\newline
+          \textit{Semantics and Pragmatics} 8(9), 1--70.\newline
           \doi{10.3765/sp.8.9}\\
   %
   2015  & A cross-linguistic study of the non-at-issueness of exhaustive
-          inferences. With Emilie Destruel, Dan Velleman, Edgar Onea, Jingyang
-          Xue, and David Beaver.  In Florian Schwarz (ed.)
-          \textit{Experimental Perspectives on Presuppositions}. Springer,
-          Dordrecht. \doi{10.1007/978-3-319-07980-6_6}\\ % chktex 8
+          inferences.\newline
+          With Emilie Destruel, Dan Velleman, Edgar Onea, Jingyang Xue, and
+          David Beaver.\newline
+          In Florian Schwarz (ed.) \textit{Experimental Perspectives on
+          Presuppositions}. Springer, Dordrecht.\newline
+          \doi{10.1007/978-3-319-07980-6_6}\\ % chktex 8
   %
-  2014  & Universal quantification as iterated dynamic conjunction. In
-          \textit{Proceedings of the 19th Amsterdam Colloquium}, 67--74.
+  2014  & Universal quantification as iterated dynamic conjunction.\newline
+          \textit{19th Amsterdam Colloquium}, 67--74.\newline
           \url{http://www.illc.uva.nl/AC/AC2013/uploaded_files/inlineitem/09_Bumford.pdf}\\
   %
   \tikzmark{p1}%
   2013  & Association with distributivity and the problem of multiple
-          licensors for singular \textit{different}. With Chris Barker.
-          \textit{Linguistics and Philosophy} 36(5), 355--369.
+          licensors for singular \textit{different}.\newline
+          With Chris Barker.\newline
+          \textit{Linguistics and Philosophy} 36(5), 355--369.\newline
           \doi{10.1007/s10988-013-9139-z}\\ % chktex 8
   %
-  2012  & It-clefts are IT (inquiry-terminating) constructions. With Dan
-          Velleman, David Beaver, Emilie Destruel, Edgar Onea, and Elizabeth
-          Coppock. In \textit{Proceedings of Semantics and Linguistic Theory
-          22}, 441--460. \doi{10.3765/salt.v22i0.2640}
+  2012  & It-clefts are IT (inquiry-terminating) constructions.\newline
+          With Dan Velleman, David Beaver, Emilie Destruel, Edgar Onea, and
+          Elizabeth Coppock.\newline
+          \textit{Semantics and Linguistic Theory 22}, 441--460.\newline
+          \doi{10.3765/salt.v22i0.2640}
   %
   \begin{tikzpicture}[overlay,remember picture]
-  \node at ($({pic cs:p1}) +(-0.3,0.1)$) {\textdagger};
-  \node at ($({pic cs:p2}) +(-0.3,0.1)$) {\textdagger};
-  \node at ($({pic cs:p3}) +(-0.3,0.1)$) {\textdagger};
-  \node at ($({pic cs:p4}) +(-0.3,0.1)$) {\textdagger};
+  \node at ($({pic cs:p1}) +(-0.3,0.1)$) {\refmark};
   \end{tikzpicture}
 \end{longtable}
+\endgroup
 
 \medskip
 
 \section*{Presentations}
 
 \begin{longtable}{LR}
-  2017 &  Split-scope effects in definite descriptions. Invited colloquium,
-          Boston University.\\
-  %
-  2017 &  Split-scope effects in definite descriptions. Invited colloquium,
-          UCLA.\\
-  %
-  2016 &  Polyadicity in descriptions. Invited talk, University of
-          Pennsylvania.\\
-  %
-  2016 &  Monadic dynamic semantics: Side effects and scope. With Simon
-          Charlow. \textit{Natural Language and Computer Science 4}, Columbia
-          University.\\
-  %
-  2016 &  The rabbit in the hat is back: Definites with joint uniqueness
-          presuppositions. With Lucas Champollion and Linmin Zhang.
-          \textit{Definiteness Across Languages}, UNAM.\\
-  %
-  2016 &  Decomposing definiteness: Effects of delayed quantification in
-          descriptions. \textit{Semantics and Linguistic Theory 26}, UT Austin.\\
-  %
-  2016 &  Split-scope definites. Invited talk, Queen Mary University.\\
-  %
-  2015 &  Temporal modification without pronouns. Invited talk, NYU
-          Continuations Workshop.\\
+  2017 & Proofs as programs (and programs as proofs).
+         Invited lecture, ``Computational Semantics''
+         graduate seminar (Simon Charlow, instructor), Rutgers University.\\
   % 
-  2015 &  Adjectives of comparison. With Chris Barker. Invited talk, UCSC
-          S-Circle.\\
-  % 
-  2014 &  Incremental quantification and the dynamics of pair-list phenomena.
-          Invited talk, Stanford Construction of Meaning Workshop.\\
-  % 
-  2013 &  Universal quantification as iterated dynamic conjunction. \textit{19th
-          Amsterdam Colloquium}. \\
-  % 
-  2013 &  Generalized association with distributivity. With Chris Barker.
-          \textit{Semantics and Linguistic Theory 23}, UCSC.\\
+  2017 & Parsing with Dynamic Continuized CCG.
+         With Michael White, Jordan Needle, and Simon Charlow.
+         \textit{13th International Workshop on Tree-Adjoining Grammar and
+         Related Formalisms}, Ume\aa.\\
   %
-  2012 &  It-clefts are IT (inquiry-terminating) constructions. With Dan
-          Velleman, David Beaver, Emilie Destruel, Edgar Onea, and Elizabeth
-          Coppock. \textit{Semantics and Linguistic Theory 22}, University of
-          Chicago.\\
+  2017 & Split-scope effects in definite descriptions.
+         Invited colloquium, Boston University.\\
+  %
+  % 2017 &  Split-scope effects in definite descriptions.
+  %         Invited colloquium, UCLA.\\
+  %
+  2016 & Polyadicity in descriptions.
+         Invited talk, University of Pennsylvania.\\
+  %
+  2016 & Monadic dynamic semantics: Side effects and scope.
+         With Simon Charlow.
+         \textit{Natural Language and Computer Science 4}, Columbia University.\\
+  %
+  2016 & The rabbit in the hat is back: Definites with joint uniqueness
+         presuppositions.
+         With Lucas Champollion and Linmin Zhang.
+         \textit{Definiteness Across Languages}, UNAM.\\
+  %
+  2016 & Decomposing definiteness: Effects of delayed quantification in
+         descriptions.
+         \textit{Semantics and Linguistic Theory 26}, UT Austin.\\
+  %
+  2016 & Split-scope definites.
+         Invited talk, Queen Mary University.\\
+  %
+  2015 & Temporal modification without pronouns.
+         Invited talk, NYU Continuations Workshop.\\
   % 
-  2011 &  ``Yes, but\dots'' --- Exhaustivity and at-issueness across languages.
-           With Dan Velleman, David Beaver, Emilie Destruel, and Edgar Onea.
-           \textit{Workshop on Projection, Entailment, Presupposition, and
-           Assertion}.\\
+  2015 & Adjectives of comparison.
+         With Chris Barker.
+         Invited talk, UCSC S-Circle.\\
   % 
-  2009 &  Effects of grammatical form and familiarity on metaphor
-          comprehension. With Lauretta Reeves. \textit{Metaphor Festival},
-          Stockholm.
+  2014 & Incremental quantification and the dynamics of pair-list phenomena.
+         Invited talk, Stanford Construction of Meaning Workshop.\\
+  % 
+  2013 & Universal quantification as iterated dynamic conjunction.
+         \textit{19th Amsterdam Colloquium}. \\
+  % 
+  2013 & Generalized association with distributivity.
+         With Chris Barker.
+         \textit{Semantics and Linguistic Theory 23}, UCSC.\\
+  %
+  2012 & It-clefts are IT (inquiry-terminating) constructions.
+         With Dan Velleman, David Beaver, Emilie Destruel, Edgar Onea, and
+         Elizabeth Coppock.
+         \textit{Semantics and Linguistic Theory 22}, University of Chicago.\\
+  % 
+  2011 & ``Yes, but\dots'' --- Exhaustivity and at-issueness across languages.
+          With Dan Velleman, David Beaver, Emilie Destruel, and Edgar Onea.
+          \textit{Workshop on Projection, Entailment, Presupposition, and
+          Assertion}.\\
+  % 
+  2009 & Effects of grammatical form and familiarity on metaphor
+         comprehension.
+         With Lauretta Reeves.
+         \textit{Metaphor Festival}, Stockholm.
 \end{longtable}
 
 \medskip
@@ -267,47 +310,94 @@ email: \href{mailto:dbumford@gmail.com}{dbumford@gmail.com}
 
 \section*{Teaching}
 
+\subsection*{As primary instructor at UCLA}
+
 \begin{longtable}{LR}
-  2016 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
-         35 students\newline
+  %
+  2018 & Ling 165C: Semantic Theory II (graduate)\\
+  %
+  2018 & Ling 201C: Semantics II (undergraduate)\\
+  %
+  2017 & Ling 20: Introduction to Linguistic Analysis (undergraduate)
+  % 
+\end{longtable}
+
+\subsection*{As primary instructor elsewhere}
+
+\begin{longtable}{LR}
+  %
+  2015 & Monads and Natural Language (European Summer School in Logic, Language,
+         and Information), co-taught with Chris Barker
+\end{longtable}
+
+\subsection*{As teaching assistant at NYU and UT}
+
+\begin{longtable}{LR}
+  2016 & Introduction to Semantics (NYU, Chris Barker)\newline
+         %35 students\newline
          \hspace*{0.5cm}\textendash\
          7 primary lectures, weekly recitation sections, assignment and exam
          development\\
   %
-  2015 & Teaching Assistant for Chris Barker, ``Introduction to Semantics'',
-         30 students\\
+  2015 & Introduction to Semantics (NYU, Chris Barker)
+         %30 students
+         \\
   %
-  2015 & Co-instructor with Chris Barker at the 2015 European Summer School in
-         Logic, Language, and Information (Barcelona), ``Monads and Natural
-         Language''\\
+  2013 & Language and Mind (NYU, Anna Szabolcsi and Brian McElree)
+         %75 students
+         \\
   %
-  2013 & Teaching Assistant for Anna Szabolcsi and Brian McElree,
-         ``Language and Mind'', 70 students\\
+  2013 & Grammatical Analysis (NYU, Mark Baltin)
+         % 25 students
+         \\
   %
-  2013 & Teaching Assistant for Mark Baltin, ``Grammatical Analysis'', 25
-         students\\
+  2009 & Mind and Reason (UT, David Beaver)
+         %20 students
+         \\
   %
-  2009 & Teaching Assistant for David Beaver, ``Mind and Reason'', 20 students\\
-  %
-  2008 & Teaching Assistant for Robert Pitman, ``Punishment in Society'', 10 students
+  2008 & Punishment in Society (UT, Robert Pitman)
+         %10 students
 \end{longtable}
 
 \medskip
 
+\needspace{5\baselineskip}
 \section*{Service and Experience}
 
+\subsection*{Peer Review}
+
+\textit{Semantics and Pragmatics} (2012, 2017),
+\textit{Linguistics and Philosophy} (2017), \textit{Natural Language
+Semantics} (2017), \textit{Journal of Semantics} (2016--17), \textit{Semantics
+and Linguistic Theory} (2018), \textit{Logic and Engineering of Natural
+Language Semantics} (2016), \textit{Journal of Language
+Modelling} (2017) 
+
+\medskip
+
+\subsection*{Conference organization}
+
 \begin{longtable}{LR}
-  2016       & Referee, \textit{Journal of Semantics}\\
-  2015       & Referee, \textit{Logic and Engineering of Natural Language
-               Semantics 12}\\
-  2013--16   & Organizer, NYU Semantics Group\\
+  2018--19   & Co-organizer, \textit{Semantics and Linguistic Theory 29}\\
+  2017--18   & Program Committee, \textit{West Coast Conference on Formal
+               Linguistics 36}\\
+  2013--14   & Program Committee, \textit{Semantics and Linguistic Theory 24}
+\end{longtable}
+
+\subsection*{Department Administration}
+
+\begin{longtable}{LR}
+  2018--     & Website Committee, UCLA Linguistics\\
+  2013--16   & Organizer, NYU Semantics Group
+\end{longtable}
+
+\subsection*{Other employment}
+\begin{longtable}{LR}
   2013--15   & Software development, The Lambda Calculator\newline
                \hspace*{0.5cm}\textendash\
                Pedagogical tool to assist in teaching the lambda calculus\\
-  2013--14   & Program Committee, \textit{Semantics and Linguistic Theory 24}\\
-  2012       & Referee, \textit{Semantics and Pragmatics}\\
   2012       & Research Assistant, Stephanie Harves\\
-  2009--11   & Research Assistant, David Beaver\\
+  2009--11   & Research Assistant, David Beaver
 \end{longtable}
 
 % \section*{Skills}
