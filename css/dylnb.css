@@ -37,14 +37,14 @@ h3 {
   /* line-height: 155%; */
 }
 
-#research ul, #resources ul {
+#research ul, #resources ul, #classes ul {
   /* padding: 0 0 0 1.2em; */
   /* list-style-type:disc; */
   padding: 0 0 0 0;
   list-style-type:none;
 }
 
-#research ul li, #resources ul li {
+#research ul li, #resources ul li, #classes ul li {
   margin:0;
   font-size:0.95em;
   /* line-height: 155%; */
@@ -54,7 +54,7 @@ h3 {
   text-align: left;
 }
 
-#research ul li:last-child, #resources ul li:last-child {
+#research ul li:last-child, #resources ul li:last-child, #classes ul li:last-child {
   margin-bottom:2.5em;
 }
 
@@ -208,6 +208,12 @@ iframe {
 
 .resources:hover {
   background-image:url(../images/code-light2.png);
+}
+
+.classes:hover {
+  background-image:url(../images/school.png);
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
 .misc:hover {
