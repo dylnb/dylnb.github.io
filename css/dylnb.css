@@ -141,10 +141,10 @@ span.iconbox a:hover {
   height: 100%;
 }
 
-iframe {
-  margin-left: -20%;
-  width: 120%;
-}
+/* iframe { */
+/*   margin-left: -20%; */
+/*   width: 120%; */
+/* } */
 
 @media (min-device-width : 375px) {
   .nav-button {
@@ -172,10 +172,6 @@ iframe {
 }
 
 @media (min-width: 550px) {
-  iframe {
-    margin-left: -10%;
-    width: 110%;
-  }
   /* #nav-dup { */
   /*   display: none; */
   /* } */
@@ -220,6 +216,33 @@ iframe {
   background-image:url(../images/lobster2.png);
   background-repeat:no-repeat;
   background-position:center;
+}
+
+#ngrams li {
+  position: relative;
+  padding-bottom: 95%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  background:url(../images/loading.svg) 50% 25% no-repeat;
+}
+
+@media (min-width: 550px) {
+  #ngrams li {
+    position: relative;
+    padding-bottom: 50%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+#ngrams li iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 span.pubtitle {
