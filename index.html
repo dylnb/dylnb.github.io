@@ -86,6 +86,7 @@
     <div id="panewrapper">
       <ul>
         <li id="research" class="pane">
+        <div>
         <h2>Research
           <span class="iconbox">
             <a class="icon" href="cv/bumford-cv.pdf">
@@ -538,8 +539,11 @@
             </p>
           </li>
         </ul>
+        </div>
+        </li>
 
         <li id="resources" class="pane">
+        <div>
         <h2>Resources
           <span class="iconbox">
             <a class="icon" href="https://github.com/dylnb">
@@ -549,47 +553,86 @@
             </a>
           </span>
         </h2>
+        <h3>Parsers and Calculators</h3>
+        <ul>
+          <li>
+            <p>
+              A proof-of-concept <a href="https://schar.github.io/TDParse/">
+              type-driven parser and interpreter</a>. Built with Simon Charlow
+              using Haskell and Purescript. See the code, which is really just
+              compositional
+              semantics, <a href="https://github.com/schar/TDParse">here</a>,
+              along with a brief description of what you can do.
+            </p>
+          </li>
+          <li>
+            <p>
+              A <a href="https://schar.github.io/PLAground">dynamic semantics
+              (PLA) calculator</a>, showing how the state changes in response to
+              various formulas. The calculator is written in Elm, a purely
+              functional language,
+              so <a href="https://github.com/schar/PLAground/blob/gh-pages/src/PLA.elm">the
+              code</a> is the semantics. Also check out Simon
+              Charlow's <a href="https://github.com/schar/PLAground">command
+              line version</a>, and Chris
+              Potts's <a href="http://www.christopherpotts.net/ling/implementations/pla">original
+              web app</a>.
+            </p>
+          </li>
+          <li>
+            <p>
+              I'm listed on the ever-growing credits reel
+              of <a href="http://lambdacalculator.com">The Lambda
+              Calculator</a>, "an interactive, graphical application to help
+              students of natural language semantics practice derivations in the
+              typed lambda calculus".
+            </p>
+          </li>
+        </ul>
         <h3>Lecture Notes</h3>
         <ul>
           <li>
             <p>
+            <a href="https://simoncharlow.com/esslli/">Slides</a> from a 2022 ESSLLI
+            course co-taught with Simon Charlow on functional programming
+            techniques for natural language semantics.
+            </p>
+          </li>
+          <li>
+            <p>
             <a href="https://github.com/dylnb/esslli2015-monads">Notes,
-            papers, and code</a> demonstrating the use of monads as a tool
-            for natural language semantics from my ESSLLI 2015 course with
-            Chris Barker and Simon Charlow.
+            papers, and code</a> from a much earlier iteration of the course
+            above led by Chris Barker.
             </p>
           </li>
         </ul>
-        <h3>Semantic Fragments</h3>
+        <h3>Reference Fragments for Semantics Papers</h3>
         <ul>
           <li>
-            <p> <a
-              href="https://github.com/dylnb/fragments/tree/master/iter-conj">Haskell
-              code</a> for Bumford 2015, "Incremental quantification and the
-            dynamics of pair-list phenomena", embedded in an implementation of
-            Charlow's (2014) monadic dynamic semantics. </p>
-          </li>
-          <li>
             <p>
-            <a
-               href="https://github.com/dylnb/fragments/tree/master/assoc-dist">Haskell
-               code</a> for Bumford and Barker 2013, "Association with
-             distributivity and the problem of multiple antecedents for
-             singular 'different'".
+              Bumford 2017
+              (dissertation), <a href="https://github.com/dylnb/fragments/tree/master/split-scope-diss/split-defs">"Split-scope
+              definites"</a>
             </p>
           </li>
           <li>
             <p>
-            Yet another <a href="https://schar.github.io/PLAground">PLA
-              calculator</a>, this time with rewritable history! The
-            calculator is written in Elm, a purely functional language, so
-            <a
-              href="https://github.com/schar/PLAground/blob/gh-pages/src/PLA.elm">the
-              code</a> <em>is</em> the semantics. Also check out Simon Charlow's <a
-              href="https://github.com/schar/PLAground">command line
-              version</a>, and Chris Potts's <a
-              href="http://www.christopherpotts.net/ling/implementations/pla">original
-              web app</a>.
+              Bumford
+              2015, <a href="https://github.com/dylnb/fragments/tree/master/iter-conj">"Incremental
+              quantification and the dynamics of pair-list phenomena"</a>; in
+              these scripts you can also
+              find <a href="https://github.com/dylnb/fragments/blob/master/iter-conj/IterConj.hs#L241">examples</a>
+              that were later analyzed in Bumford 2022, "Polymorphic distributivity"
+            </p>
+          </li>
+          <li>
+            <p>
+              Bumford and Barker 2013,
+            <a href="https://github.com/dylnb/fragments/tree/master/assoc-dist">"Association
+               with distributivity and the problem of multiple antecedents for
+               singular 'different'"</a>
+            </p>
+          </li>
         </ul>
         <h3>Experiments, Simulations, Data</h3>
         <ul>
@@ -615,27 +658,21 @@
           <li>
             <p>
             I designed and help maintain <a href="https://saltconf.github.io/">the
-            Semantics and Linguistic Theory site</a>
+            Semantics and Linguistic Theory site</a>.
             </p>
           </li>
           <li>
             <p>
-            <a href="http://lambdacalculator.com">The Lambda Calculator</a>,
-            "an interactive, graphical application to help
-            students of natural language semantics practice derivations in the
-            typed lambda calculus" (developed in coordination with Lucas
-            Champollion, Josh Tauberer, and Maribel Romero)
-            </p>
-          </li>
-          <li>
-            <p>
-            <a href="djinngrams.html">Djinn-Grams</a>, a collection of
-            self-fulfilling <em>n</em>-grams
+            <a href="djinngrams.html">Here</a> is a collection of
+            self-fulfilling <em>n</em>-grams I found while working very hard.
             </p>
           </li>
         </ul>
+        </div>
+        </li>
 
         <li id="about" class="pane">
+        <div>
         <h2>About
           <span class="iconbox">
             <span id="emtext">
@@ -669,13 +706,17 @@
           grammar learning, and the implicatures of clefts and exclusives across
           languages.
           </p>
+        </div>
         </li>
 
         <li id="classes" class="pane" style="padding-right:0;">
-
-          <h2>Classes at UCLA</h2>
+        <div>
+        <h2>Classes at UCLA</h2>
           <h3>Seminars</h3>
           <ul>
+            <li>
+              English as a programming language: Fall 2022
+            </li>
             <li>
               New approaches to questions: Winter 2021
             </li>
@@ -715,6 +756,7 @@
               Mathematical Structures in Language: Fall 2018
             </li>
           </ul>
+        </div>
         </li>
 
       </ul>
