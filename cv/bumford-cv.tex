@@ -82,7 +82,8 @@
 %%% macros
 \newcommand{\with}{\&}
 % \newcommand{\refmark}{\textcolor{gray}{\textgreek{r}}}
-\newcommand{\refmark}{\textcolor{gray}{\textdagger}}
+% \newcommand{\refmark}{\textcolor{gray}{\textdagger}}
+\newcommand{\refmark}{\textcolor{gray}{}}
 
 
 \begin{document}
@@ -95,15 +96,27 @@
 \begin{minipage}[t]{0.55\textwidth}
 UCLA, Department of Linguistics\\
 3125 Campbell Hall, Los Angeles, CA 90095
+\\
+web: \href{https://dylanbumford.com}{dylanbumford.com}\\
+email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 \end{minipage}
 \begin{minipage}[t]{\linegoal}
 \raggedleft%
-web: \href{https://dylanbumford.com}{dylanbumford.com}\\
-email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
+% web: \href{https://dylanbumford.com}{dylanbumford.com}\\
+% email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 \end{minipage}
 
 \bigskip
 \bigskip
+
+\section*{Employment}
+
+\begin{longtable}{LR}
+  2017--    & Assistant Professor\newline
+              University of California, Los Angeles, Department of Linguistics
+\end{longtable}
+
+\medskip
 
 \section*{Education}
 
@@ -121,30 +134,21 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 
 \medskip
 
-\section*{Employment}
-
-\begin{longtable}{LR}
-  2017--    & Assistant Professor\newline
-              University of California, Los Angeles, Department of Linguistics
-\end{longtable}
-
-\medskip
-
-\section*{Publications \
-  \NoCaseChange{\normalsize\mdseries\color{gray} (\refmark\ $=$\
-    journal article)}
+\section*{Publications% \
+%  \NoCaseChange{\normalsize\mdseries\color{gray} (\refmark\ $=$\
+%    journal article)}
 }
 
 \begingroup
 \renewcommand{\arraystretch}{1.5} % more space between rows
 \begin{longtable}{LR}
   %
-  \begin{tikzpicture}[overlay,remember picture]
-  \node at ($({pic cs:p8}) +(-0.3,0.1)$) {\refmark};
-  \node at ($({pic cs:p7}) +(-0.3,0.1)$) {\refmark};
-  \node at ($({pic cs:p6}) +(-0.3,0.1)$) {\refmark};
-  \node at ($({pic cs:p5}) +(-0.3,0.1)$) {\refmark};
-  \end{tikzpicture}
+  \begin{tikzpicture}[overlay,remember picture]%
+  \node at ($({pic cs:p8}) +(-0.3,0.1)$) {\refmark};%
+  \node at ($({pic cs:p7}) +(-0.3,0.1)$) {\refmark};%
+  \node at ($({pic cs:p6}) +(-0.3,0.1)$) {\refmark};%
+  \node at ($({pic cs:p5}) +(-0.3,0.1)$) {\refmark};%
+  \end{tikzpicture}%
   %
   % \tikzmark{p4}%
   % In prep.  & Not the only game in town: Relative and indeterminate exclusive
@@ -156,13 +160,16 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
   % \end{tikzpicture}
   %
   \tikzmark{p8}%
+  ---   & Effect-driven interpretation.\newline
+          With Simon Charlow.\newline
+          Under contract for \textit{Cambridge University Press}.\\
   2022  & Polymorphic distributivity.\newline
-          \textit{Natural Language Semantics}, early access online.\newline
+          \textit{Natural Language Semantics} 30(3), 239--268.\newline
           \doi{10.1007/s11050-022-09195-5}\\
   \tikzmark{p7}%
   2022  & Composition under distributive natural transformations: Or, When
           Predicate Abstraction is impossible.\newline
-          \textit{Journal of Logic, Language, and Information}, early access online.\newline
+          \textit{Journal of Logic, Language, and Information} 31(3), 287--307.\newline
           \doi{10.1007/s10849-022-09361-2}\\
   \tikzmark{p6}%
   2022  & Negative Polarity Items in definite superlatives.\newline
@@ -225,11 +232,11 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
           \textit{Semantics and Linguistic Theory 22}, 441--460.\newline
           \doi{10.3765/salt.v22i0.2640}
   %
-  \begin{tikzpicture}[overlay,remember picture]
-  \node at ($({pic cs:p3}) +(-0.3,0.1)$) {\refmark};
-  \node at ($({pic cs:p2}) +(-0.3,0.1)$) {\refmark};
-  \node at ($({pic cs:p1}) +(-0.3,0.1)$) {\refmark};
-  \end{tikzpicture}
+  \begin{tikzpicture}[overlay,remember picture]%
+  \node at ($({pic cs:p3}) +(-0.3,0.1)$) {\refmark};%
+  \node at ($({pic cs:p2}) +(-0.3,0.1)$) {\refmark};%
+  \node at ($({pic cs:p1}) +(-0.3,0.1)$) {\refmark};%
+  \end{tikzpicture}%
 \end{longtable}
 \endgroup
 
@@ -330,45 +337,47 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 
 \medskip
 
+\needspace{5\baselineskip}
 \section*{Teaching}
 
-\subsection*{As primary instructor at UCLA}
+\subsection*{Primary instructor at UCLA}
 
 \begin{longtable}{LR}
-  2021 & Ling 200C: Semantic Theory I (graduate)\\
+  2022 & \textlf{Ling 252}: English as a programming language (graduate seminar)\\
   %
-  2021 & Ling 120C: Semantics I (undergraduate)\\
+  2021 & \textlf{Ling 200C}: Semantic Theory I (graduate)\\
   %
-  2021 & Ling 252: New issues for the semantics of questions (graduate seminar)\\
+  2021 & \textlf{Ling 120C}: Semantics I (undergraduate)\\
   %
-  2020 & Ling 200C: Semantic Theory I (graduate)\\
+  2021 & \textlf{Ling 252}: New issues for the semantics of questions (graduate seminar)\\
   %
-  2020 & Ling 222: Semantic Theory III, Dynamic Semantics (graduate)\\
+  2020 & \textlf{Ling 200C}: Semantic Theory I (graduate)\\
   %
-  2020 & Ling 120C: Semantics I (undergraduate)\\
+  2020 & \textlf{Ling 222}: Semantic Theory III, Dynamic Semantics (graduate)\\
   %
-  2019 & Ling 200C: Semantic Theory I (graduate)\\
+  2020 & \textlf{Ling 120C}: Semantics I (undergraduate)\\
   %
-  2019 & Ling 165C: Semantics II (undergraduate)\\
+  2019 & \textlf{Ling 200C}: Semantic Theory I (graduate)\\
   %
-  2019 & Ling 252: Relative Clauses (graduate seminar)\\
+  2019 & \textlf{Ling 165C}: Semantics II (undergraduate)\\
   %
-  2018 & Ling 200C: Semantic Theory I (graduate)\\
+  2019 & \textlf{Ling 252}: Relative Clauses (graduate seminar)\\
   %
-  2018 & Ling 180: Mathematical Structures in Language (undergraduate)\\
+  2018 & \textlf{Ling 200C}: Semantic Theory I (graduate)\\
   %
-  2018 & Ling 252: Definiteness and Degrees (graduate seminar)\\
+  2018 & \textlf{Ling 180}: Mathematical Structures in Language (undergraduate)\\
   %
-  2018 & Ling 165C: Semantic Theory II (graduate)\\
+  2018 & \textlf{Ling 252}: Definiteness and Degrees (graduate seminar)\\
   %
-  2018 & Ling 201C: Semantics II (undergraduate)\\
+  2018 & \textlf{Ling 165C}: Semantic Theory II (graduate)\\
   %
-  2017 & Ling 20: Introduction to Linguistic Analysis (undergraduate)
+  2018 & \textlf{Ling 201C}: Semantics II (undergraduate)\\
+  %
+  2017 & \textlf{Ling 20}: Introduction to Linguistic Analysis (undergraduate)
   % 
 \end{longtable}
 
-\needspace{5\baselineskip}
-\subsection*{As primary instructor elsewhere}%
+\subsection*{Primary instructor elsewhere}%
 
 \begin{longtable}{LR}
   2022 & Effectful composition in natural language semantics (European Summer
@@ -379,7 +388,7 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
          and Information), co-taught with Chris Barker
 \end{longtable}
 
-\subsection*{As teaching assistant at NYU and UT}
+\subsection*{Teaching assistant}
 
 \begin{longtable}{LR}
   2016 & Introduction to Semantics (NYU, Chris Barker)
@@ -414,28 +423,43 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 
 \section*{Advising}
 
-\subsection*{As chair}
+\subsection*{Faculty mentor}
+
+\begin{longtable}{LR}
+  2022    & Laurel Perkins, UCLA Linguistics
+\end{longtable}
+
+\subsection*{PhD dissertation chair}
 
 \begin{longtable}{LR}
   2020    & Maayan Abenina-Adar, \textit{Expressing ignorance with determiner
-            phrases}, PhD Dissertation\\
-  %
-  ongoing & Kalen Chang, \textit{Restrictiveness and the scope of adjectives},
-            MA Thesis
+            phrases}, UCLA Linguistics
 \end{longtable}
 
-\subsection*{As committee member}
+\subsection*{MA thesis chair}
+
+\begin{longtable}{LR}
+  2022    & Kalen Chang, \textit{Restrictiveness and the scope of adjectives},
+            UCLA Linguistics
+\end{longtable}
+
+\subsection*{Committee member}
 
 \begin{longtable}{LR}
   ongoing & Huilei Wang, PhD Dissertation\\
   %
-  ongoing & Mia Teixeira, \textit{Learning scalar items}, PhD Dissertation\\
+  ongoing & Yang Wang, PhD Dissertation\\
   %
-  ongoing & Bethany Sturman, \textit{The semantics of quotation intonation}, PhD Dissertation\\
+  2022    & Bethany Sturman, \textit{The semantics of quotation intonation},
+            PhD Dissertation\\
   %
-  2021    & Maura O'Leary, \textit{The Evaluation Times of Nominal Predicates}, PhD Dissertation\\
+  2022    & Maura O'Leary, \textit{The Evaluation Times of Nominal Predicates},
+            PhD Dissertation\\
   %
-  2021    & Deborah Wong, \textit{Wh-in situ sluicing in Minimalist Grammars}, PhD Dissertation\\
+  % inc.    & Mia Teixeira, \textit{Learning scalar items}, PhD Dissertation\\
+  %
+  2021    & Deborah Wong, \textit{Wh-in situ sluicing in Minimalist Grammars},
+            PhD Dissertation\\
   %
   2021    & Yang Wang, \textit{Regular languages extended with reduplication:
             Formal models, proofs and illustrations}, MA Thesis\\
@@ -443,9 +467,11 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
   2020    & Iara Mantenuto, \textit{Alternate Particles in San Sebasti\'{a}n del
             Monte Mixtec and Beyond}, PhD Dissertation\\
   %
-  2020    & Richard Stockwell, \textit{The contrast condition on ellipsis}, PhD Dissertation\\
+  2020    & Richard Stockwell, \textit{The contrast condition on ellipsis}, UCLA
+            PhD Dissertation\\
   %
-  2020    & Mia Teixeira, \textit{Against Exclusion-Based Counterfactuality}, MA Thesis\\
+  2020    & Mia Teixeira, \textit{Against Exclusion-Based Counterfactuality},
+            MA Thesis\\
   %
   2020    & Phillip Barnett, \textit{Arc-Eager Effects on Probabilistic
             Left-Corner Language Models}, MA Thesis\\
@@ -454,20 +480,28 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
             Cairene Arabic}, MA Thesis
 \end{longtable}
 
+\subsection*{Research project supervisor}
+
+\begin{longtable}{LR}
+  2022     & Kalen Chang, \textit{Nonrestrictive Adjective Modification and
+             Not-At-Issue Meaning}, Graduate Student Research Mentorship
+\end{longtable}
+
 \subsection*{Other advising}
 
 \begin{longtable}{LR}
+  2022     & Pop-up mentor, North American Summer School of Logic, Language, and
+             Information
+  \\
   2020     & Florence Verity, \textit{Implicatures in continuation-based dynamic
-             semantics by reasoning in the context} (External examiner, ANU MPhil
-             thesis)
+             semantics by reasoning in the context}, External examiner, ANU MPhil
+             thesis
   \\
   2019--20 & Isabel Zhou, CollegeBoard AP Research Course, Expert Advisor
 \end{longtable}
 
-
 \medskip
 
-\needspace{5\baselineskip}
 \section*{Honors, Grants, and Awards}
 
 \begin{longtable}{LR}
@@ -498,11 +532,11 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
 \needspace{5\baselineskip}
 \section*{Service and Experience}
 
-\subsection*{Journal review}
+\subsection*{Journal reviewing}
 
 \begin{longtable}{LR}
-  2016--22 &
-    \textit{Glossa Psycholinguistics}% (2022)
+  ongoing &
+    \textit{Glossa}% (2022)
     ,
     \textit{Linguistic Inquiry}% (2021)
     ,
@@ -521,10 +555,10 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
     \textit{Journal of Language Modelling}% (2017) 
 \end{longtable}
 
-\subsection*{Conference review}
+\subsection*{Conference reviewing}
 
 \begin{longtable}{LR}
-  2017--22 &
+  ongoing &
     \textit{Computational and Experimental Explanations in Semantics and
              Pragmatics}% (2022)
     ,
@@ -539,13 +573,14 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
     \textit{Sinn und Bedeutung}% (2018--19)
     ,
     \textit{Logic and Engineering of Natural Language Semantics}% (2017)
+    ,
+    \textit{Amsterdam Colloquium}% (2020--)
 \end{longtable}
 
-\clearpage
-
-\subsection*{Conference organization}
+\subsection*{Professional service}
 
 \begin{longtable}{LR}
+  2022--     & Technology Coordinator, \textit{Semantics and Linguistic Theory}\\
   2022--22   & Co-organizer, \textit{California Universities Semantics and
                Pragmatics 13}\\
   2019--     & Steering Committee, \textit{Semantics and Linguistic Theory}\\
@@ -555,7 +590,7 @@ email: \href{mailto:dbumford@ucla.edu}{dbumford@ucla.edu}
   2013--14   & Program Committee, \textit{Semantics and Linguistic Theory 24}
 \end{longtable}
 
-\subsection*{Department administration}
+\subsection*{Departmental service}
 
 \begin{longtable}{LR}
   2021--21   & Climate Survey Committee, UCLA Linguistics\\
