@@ -39,22 +39,46 @@
   <script type="text/javascript">
     jQuery(function(){
       function e(){
-        jQuery(this).parents("#menuoption:first").find("a").removeClass("selected").end().end().addClass("selected")
+        jQuery("#nav a").removeClass("selected");
+        jQuery(this).addClass("selected")
+      }
+      function resizeToPane(id, animate){
+        var pane=jQuery("#"+id).get(0);
+        if(!pane){return}
+        var height=pane.scrollHeight;
+        if(!height){return}
+        if(animate){
+          jQuery("#panewrapper").stop(true,false).animate({height:height},300)
+        } else{
+          jQuery("#panewrapper").height(height)
+        }
       }
       function t(t){
-        var n=jQuery("#menuoption").find('a[href$="'+t.id+'"]').get(0);e.call(n)
+        var n=jQuery("#nav").find('a[href$="'+t.id+'"]').get(0);
+        e.call(n);
+        resizeToPane(t.id,true)
       }
       jQuery.easing.easeOutExpo=function(e,t,n,r,i){
         return t==i?n+r:r*(-Math.pow(2,-10*t/i)+1)+n
       };
-      jQuery("#menuoption").find("a").click(e);
+      jQuery("#nav").find("a").click(e);
       if(window.location.hash){
         t({id:window.location.hash.substr(1)})
       } else{
-        jQuery("#menuoption a:first").click()
+        jQuery("#nav a:first").click()
       }
       jQuery.localScroll.defaults.axis="xy";
-      jQuery.localScroll({target:"#content",queue:true,duration:600,hash:true,easing:"easeOutExpo",onAfter:t})
+      jQuery.localScroll({target:"#content",queue:true,duration:600,hash:true,easing:"easeOutExpo",onBefore:function(event,pane){
+        var wrapper=jQuery("#panewrapper");
+        wrapper.stop(true,false);
+        if(pane.scrollHeight>wrapper.height()){
+          wrapper.height(pane.scrollHeight)
+        }
+      },onAfter:function(target){t(jQuery(target).get(0))}});
+      jQuery(window).on("load resize",function(){
+        var id=window.location.hash.substr(1)||"research";
+        resizeToPane(id,false)
+      })
     })
   </script>
 </head>
@@ -100,26 +124,6 @@
         <ul>
           <li>
           <p>
-            <span class="pubtitle">
-              Pluractional adverbials as incremental quantifiers
-            </span>
-            <br>
-            With Liz Coppock
-            <br>
-            <em>Semantics and Linguistic Theory</em>
-          </p>
-          </li>
-          <!-- <li> -->
-          <!-- <p> -->
-          <!--   <span class="pubtitle"> -->
-          <!--     Superlative concepts -->
-          <!--   </span> -->
-          <!--   <br> -->
-          <!--   With Ned Sanger -->
-          <!-- </p> -->
-          <!-- </li> -->
-          <li>
-          <p>
             <a href="files/bumford-charlow-xover.pdf">
             <span class="pubtitle">
             Dynamic semantics with static types
@@ -131,6 +135,15 @@
           <em>Submitted</em>
           </p>
           </li>
+          <!-- <li> -->
+          <!-- <p> -->
+          <!--   <span class="pubtitle"> -->
+          <!--     Superlative concepts -->
+          <!--   </span> -->
+          <!--   <br> -->
+          <!--   With Ned Sanger -->
+          <!-- </p> -->
+          <!-- </li> -->
           <!-- <li> -->
           <!--   <p> -->
           <!--   <span class="pubtitle"> -->
@@ -144,22 +157,34 @@
         <h3>Books</h3>
         <ul>
           <li>
-          <p>
-            <!-- <a href="files/bumford-charlow-xover.pdf"> -->
+            <p>
+            2026
+            <br>
             <a href="files/bumford-charlow-26-effect-driven-interpretation.pdf">
             <span class="pubtitle">
             Effect-driven interpretation: Functors for natural language composition
             </span>
             </a>
-          <br>
-          With Simon Charlow
-          <br>
-          To appear with <em>Cambridge University Press</em>
-          </p>
+            <br>
+            With Simon Charlow
+            <br>
+            <em>Cambridge University Press</em>
+            </p>
           </li>
         </ul>
         <h3>Articles</h3>
         <ul>
+          <li>
+          <p>
+            <span class="pubtitle">
+              Pluractional adverbials as incremental quantifiers
+            </span>
+            <br>
+            With Liz Coppock
+            <br>
+            <em>Semantics and Linguistic Theory</em>
+          </p>
+          </li>
           <li>
             <p>
             2022
@@ -390,6 +415,17 @@
 
         <h3>Selected Presentations</h3>
         <ul>
+          <li>
+            <p>
+            2026.
+            <span class="pubtitle">
+              Pluractional adverbials as incremental quantifiers.
+            </span>
+            <em>Semantics and Linguistic Theory 36.</em>
+            (with Liz Coppock).
+            <!-- <a href="files/coppock-bumford-salt2026-poster.pdf">[poster]</a> -->
+            </p>
+          </li>
           <li>
             <p>
             2020.
